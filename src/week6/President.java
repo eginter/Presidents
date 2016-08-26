@@ -63,4 +63,6 @@ public class President {
 	public void setPresNumber(int presNumber) {
 		this.presNumber = presNumber;
 	}
+	
+	
 }
