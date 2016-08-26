@@ -11,6 +11,7 @@
 	<p>${presidentNumber}</p>
 	<p>${selectedPresident}</p>
 	<p>${selectedPresident.firstName}</p>
+	<p><img src="img/presidentphoto/${presidentNumber}.jpg"/></p>
 <p>
 
 
