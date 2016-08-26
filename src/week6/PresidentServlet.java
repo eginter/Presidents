@@ -21,7 +21,7 @@ public class PresidentServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		int presidentNumber;
-		if (request.getParameter("presidentNumber") == null) {
+		if (request.getParameter("presidentNumber") != null) {
 			presidentNumber = Integer.parseInt(request.getParameter("presidentNumber"));
 		} else {
 			presidentNumber = 1;
