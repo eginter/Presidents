@@ -30,6 +30,7 @@ public class PresidentDAO {
 	}
 
 	public List<President> getPresidents() {
+		readJavaFile();
 		return presidents;
 	}
 
