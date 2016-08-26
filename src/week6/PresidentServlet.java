@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet("/PresidentServlet")
 public class PresidentServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
+	int presidentNumber;
 
 	public PresidentServlet() {
 		super();
@@ -20,9 +21,15 @@ public class PresidentServlet extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		int presidentNumber;
+
 		if (request.getParameter("presidentNumber") != null) {
-			presidentNumber = Integer.parseInt(request.getParameter("presidentNumber"));
+			if (presidentNumber == 43) {
+				presidentNumber = 1;
+			} else if (presidentNumber == 2) {
+				presidentNumber = 44;
+			} else {
+				presidentNumber = Integer.parseInt(request.getParameter("presidentNumber"));
+			}
 		} else {
 			presidentNumber = 1;
 		}
