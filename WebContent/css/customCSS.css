@@ -1,3 +1,21 @@
+button .left{
+border-radius: 50%;
+}
+button .right{
+border-radius: 50%;
+}
+.button5 {
+    background-color: #EEEEEE;
+    color: black;
+    border: 2px solid #555555;
+    border-radius: 50%;
+}
+
+.button5:hover {
+    background-color: #555555;
+    color: white;
+}
+
 .cursive {
   font-family: "Kaushan Script", "Helvetica Neue", Helvetica, Arial, cursive;
   font-weight: bold;

@@ -69,7 +69,7 @@
 		<div class="col-md-2">
 			<br>
 			<form>
-				<button name="presidentNumber" type="submit"
+				<button class="button5"name="presidentNumber" type="submit"
 					value="${presidentNumber-1}" onchange="this.form.submit()"><</button>
 			</form>
 			<br>
@@ -87,7 +87,7 @@
 			<br>
 			<form>
 
-				<button name="presidentNumber" type="submit"
+				<button class="button5"name="presidentNumber" type="submit"
 					value="${presidentNumber+1}" onchange="this.form.submit()">></button>
 			</form>
 			<br>
@@ -105,20 +105,21 @@
 
 		<div class="row spanbg">
 			<div class="container">
-			<div class="col-lg-5">
-				<img src="img/presidentphoto/${presidentNumber}.jpg"
+			<div class="col-lg-5 vertical-align">
+					<img src="img/presidentphoto/${presidentNumber}.jpg"
 					class="img-circle"
+					height="300" width="300"
 					alt="${selectedPresident.lastName}">
 
 			</div>
-			<div class="col-lg-7">
+			<div class="col-lg-7 vertical-align">
 				<div class="intro-text">
-					<span class="name">${selectedPresident.firstName}<br>
+					<h2 class="name">${selectedPresident.firstName}<br>
 						${selectedPresident.middleName}<br>
-						${selectedPresident.lastName}</span>
+						${selectedPresident.lastName}</h2>
 					<hr class="star-light">
-					<span class="years">${selectedPresident.termYears}</span><br>
-					<span class="party">${selectedPresident.party}</span>
+					<h2 class="years">${selectedPresident.termYears}<br>
+					${selectedPresident.party}</h2>
 				</div>
 </div>
 			</div>
