@@ -6,16 +6,18 @@ public class President {
 	String lastName;
 	String termYears;
 	String party;
+	String url;
 	static int presCounter;
 	int presNumber;
 	
-	public President(String firstName, String middleName, String lastName, String termYears, String party) {
+	public President(String firstName, String middleName, String lastName, String termYears, String party, String url) {
 		super();
 		this.firstName = firstName;
 		this.middleName = middleName;
 		this.lastName = lastName;
 		this.termYears = termYears;
 		this.party = party;
+		this.url = url;
 		presCounter++;
 		this.presNumber = presCounter;
 	}
@@ -62,6 +64,16 @@ public class President {
 	}
 	public void setPresNumber(int presNumber) {
 		this.presNumber = presNumber;
+	}
+
+
+	public String getUrl() {
+		return url;
+	}
+
+
+	public void setUrl(String url) {
+		this.url = url;
 	}
 	
 	

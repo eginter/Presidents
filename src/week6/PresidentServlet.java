@@ -23,18 +23,18 @@ public class PresidentServlet extends HttpServlet {
 			throws ServletException, IOException {
 
 		if (request.getParameter("presidentNumber") != null) {
-				presidentNumber = Integer.parseInt(request.getParameter("presidentNumber"));
+			presidentNumber = Integer.parseInt(request.getParameter("presidentNumber"));
 		} else {
 			presidentNumber = 1;
 		}
-		
+
 		System.out.println(presidentNumber);
-		
+
 		if (presidentNumber > 44)
 			presidentNumber = 1;
 		if (presidentNumber < 1)
 			presidentNumber = 44;
-		
+
 		request.setAttribute("presidentNumber", presidentNumber);
 		Map<Integer, President> presidents = new PresidentDAO(getServletContext()).getPresidents();
 		President selectedPresident = presidents.get(presidentNumber);
@@ -48,17 +48,6 @@ public class PresidentServlet extends HttpServlet {
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		// HttpSession session = request.getSession();
-		// if (session.getAttribute("presidents") == null){
-		// // first time make president map
-		// session.setAttribute("presidents" , new
-		// PresidentDAO().getPresidents());
-		//
-		// }
-		//
-		// request.getRequestDispatcher("/results.jsp").forward(request,
-		// response);
-		//
 		doGet(request, response);
 	}
 

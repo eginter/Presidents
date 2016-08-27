@@ -39,7 +39,7 @@ public class PresidentDAO {
 				if (token[2].equals("UNK")){
 					token[2] = "";
 				}
-				presidents.put(counter++, new President(token[1], token[2], token[3], token[4], token[5]));
+				presidents.put(counter++, new President(token[1], token[2], token[3], token[4], token[5], token[6]));
 				
 			}
 			in.close();
