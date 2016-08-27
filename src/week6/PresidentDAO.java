@@ -35,7 +35,7 @@ public class PresidentDAO {
 			BufferedReader in = new BufferedReader(new InputStreamReader(is));
 			String line;
 			while ((line = in.readLine()) != null) {
-				String[] token = line.split(",");
+				String[] token = line.split(", ");
 				if (token[2].equals("UNK")){
 					token[2] = "";
 				}

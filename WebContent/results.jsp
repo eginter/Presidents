@@ -124,13 +124,13 @@
 			</div>
 			</div>
 		</div>
-		
-<!---Video--->		
-		<div class="row embed-responsive embed-responsive-16by9">
- 			<iframe class="embed-responsive-item" src="${selectedPresident.url}"></iframe>
-		</div>
-		
-		
+		<!---Video--->
+				<div class="embed-responsive embed-responsive-16by9">
+		 			<iframe class="embed-responsive-item" url="${selectedPresident.url}"></iframe>
+				</div>
+
+
+
 		</div>
 	</div>
 	</header>
