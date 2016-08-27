@@ -36,6 +36,9 @@ public class PresidentDAO {
 			String line;
 			while ((line = in.readLine()) != null) {
 				String[] token = line.split(",");
+				if (token[2].equals("UNK")){
+					token[2] = "";
+				}
 				presidents.put(counter++, new President(token[1], token[2], token[3], token[4], token[5]));
 				
 			}
