@@ -1,4 +1,8 @@
-
+.cursive {
+  font-family: "Kaushan Script", "Helvetica Neue", Helvetica, Arial, cursive;
+  font-weight: bold;
+  color: #091f4a;
+}
 
 header {
   display: block;
@@ -133,3 +137,5 @@ input[type=range]:focus::-ms-fill-upper {
 .spanbg{
   background-color: #e6e4d3;
 }
+
+/***** CAROUSEL ******/

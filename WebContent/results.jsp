@@ -13,6 +13,8 @@
 <meta name="author" content="">
 
 <title>Presidents of the USA</title>
+<!---Carousel ---->
+
 
 <!-- Bootstrap  CSS -->
 <link href="css/bootstrapCSS/bootstrap/css/bootstrap.min.css"
@@ -39,63 +41,96 @@
 
 
 	<div class="container">
-
-
 		<div class="row">
-			<div class="col-md-2">
-				<img src="img/potusSEAL.png" />
-			</div>
 
-			<div class="col-md-2">
-				<br>
-				<form>
-					<button name="presidentNumber" type="submit"
-						value="${presidentNumber-1}" onchange="this.form.submit()">PREV</button>
-				</form>
-				<br>
-			</div>
-			<div class="col-md-6">
-				<br>
-				<form action="PresidentServlet" method="POST">
-					<input name="presidentNumber" type="range" min="1" max="44"
-						step="1" value="${presidentNumber}" onchange="this.form.submit()" />
-					</form>
-
-				<br>
-			</div>
-			<div class="col-md-2">
-				<br>
-				<form>
-
-					<button name="presidentNumber" type="submit"
-						value="${presidentNumber+1}" onchange="this.form.submit()">NEXT</button>
-				</form>
-				<br>
-			</div>
 
 		</div>
-		<br> <br>
+
+
+
+<div class="jumbotron">
+
+
+	<div class="row">
+		<div class="col-md-2">
+			<img src="img/potusSEAL.png" />
+		</div>
+		<div class="col-md-8">
+			<p class= "cursive">Presidents of the United States of America!</p>
+		</div>
+	</div>
+
+	<!---Slider--->
+
+
+	<div class="row">
+
+
+		<div class="col-md-2">
+			<br>
+			<form>
+				<button name="presidentNumber" type="submit"
+					value="${presidentNumber-1}" onchange="this.form.submit()"><</button>
+			</form>
+			<br>
+		</div>
+		<div class="col-md-8">
+			<br>
+			<form action="PresidentServlet" method="POST">
+				<input name="presidentNumber" type="range" min="1" max="44"
+					step="1" value="${presidentNumber}" onchange="this.form.submit()" />
+				</form>
+
+			<br>
+		</div>
+		<div class="col-md-2">
+			<br>
+			<form>
+
+				<button name="presidentNumber" type="submit"
+					value="${presidentNumber+1}" onchange="this.form.submit()">></button>
+			</form>
+			<br>
+		</div>
+
+	</div>
+
+
+
+
+
+
+<!---PREZ PANEL--->
+
 
 		<div class="row spanbg">
-			<div class="col-lg-6">
-				<img class="img-responsive img-circle"
-					src="img/presidentphoto/${presidentNumber}.jpg"
+			<div class="container">
+			<div class="col-lg-5">
+				<img src="img/presidentphoto/${presidentNumber}.jpg"
+					class="img-circle"
 					alt="${selectedPresident.lastName}">
 
 			</div>
-			<div class="col-lg-6">
+			<div class="col-lg-7">
 				<div class="intro-text">
 					<span class="name">${selectedPresident.firstName}<br>
+						${selectedPresident.middleName}<br>
 						${selectedPresident.lastName}</span>
 					<hr class="star-light">
 					<span class="years">${selectedPresident.termYears}</span><br>
 					<span class="party">${selectedPresident.party}</span>
 				</div>
-
+</div>
 			</div>
+		</div>
 		</div>
 	</div>
 	</header>
+
+
+
+
+
 
 
 </body>
