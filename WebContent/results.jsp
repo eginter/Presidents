@@ -121,9 +121,16 @@
 					<h2 class="years">${selectedPresident.termYears}<br>
 					${selectedPresident.party}</h2>
 				</div>
-</div>
+			</div>
 			</div>
 		</div>
+		
+<!---Video--->		
+		<div class="row embed-responsive embed-responsive-16by9">
+ 			<iframe class="embed-responsive-item" src="${selectedPresident.url}"></iframe>
+		</div>
+		
+		
 		</div>
 	</div>
 	</header>
