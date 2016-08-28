@@ -16,7 +16,7 @@ public class PresidentDAO {
 	private static String fileName = "WEB-INF/presidents.csv";
 	private ServletContext servletContext;
 	Map<Integer, President> presidents = new HashMap<>();
-	
+
 	public PresidentDAO(ServletContext context) {
 		System.out.println("Creating new StockFileDAO");
 		servletContext = context;
@@ -26,7 +26,7 @@ public class PresidentDAO {
 	public PresidentDAO() {
 		readJavaFile();
 	}
-	
+
 	public void readJavaFile() {
 		int counter = 1;
 		System.out.println("Loading stocks from txt file");
@@ -36,11 +36,12 @@ public class PresidentDAO {
 			String line;
 			while ((line = in.readLine()) != null) {
 				String[] token = line.split(", ");
-				if (token[2].equals("UNK")){
-					token[2] = "";
+				if (token[2].equals("UNK")) {
+					token[2] = token[3];
+					token[3] = "<br>";
 				}
 				presidents.put(counter++, new President(token[1], token[2], token[3], token[4], token[5], token[6]));
-				
+
 			}
 			in.close();
 		} catch (FileNotFoundException e) {
@@ -49,7 +50,7 @@ public class PresidentDAO {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-System.out.println(presidents);
+		System.out.println(presidents);
 	}
 
 	public String getFileName() {
@@ -67,6 +68,5 @@ System.out.println(presidents);
 	public void setPresidents(Map<Integer, President> presidents) {
 		this.presidents = presidents;
 	}
-
 
 }

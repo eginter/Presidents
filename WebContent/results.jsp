@@ -35,7 +35,10 @@
 </head>
 
 <body>
-
+	<script
+		src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<!-- Include all compiled plugins (below), or include individual files as needed -->
+	<script src="css/bootstrapCSS/bootstrap/js/bootstrap.min.js"></script>
 
 	<header>
 
@@ -48,49 +51,15 @@
 		<div class="jumbotron">
 
 
-			<div class="row">
-				<div class="col-md-2">
-					<img src="img/potusSEAL.png" />
-				</div>
-				<div class="col-md-8">
-					<p class="cursive">Presidents of the United States of America!</p>
-				</div>
-			</div>
+
+
+
+
 
 			<!---Slider--->
 
 
-			<div class="row">
 
-
-				<div class="col-md-2">
-					<br>
-					<form>
-						<button class="button5" name="presidentNumber" type="submit"
-							value="${presidentNumber-1}" onchange="this.form.submit()"><</button>
-					</form>
-					<br>
-				</div>
-				<div class="col-md-8">
-					<br>
-					<form action="PresidentServlet" method="POST">
-						<input name="presidentNumber" type="range" min="1" max="44"
-							step="1" value="${presidentNumber}" onchange="this.form.submit()" />
-					</form>
-
-					<br>
-				</div>
-				<div class="col-md-2">
-					<br>
-					<form>
-
-						<button class="button5" name="presidentNumber" type="submit"
-							value="${presidentNumber+1}" onchange="this.form.submit()">></button>
-					</form>
-					<br>
-				</div>
-
-			</div>
 
 
 
@@ -102,34 +71,108 @@
 
 			<div class="row spanbg">
 				<div class="container">
+					<div class="row hidden-md hidden-lg">
+
+
+
+						<div class="col-md-12">
+							<br>
+							<form action="PresidentServlet" method="POST">
+								<input name="presidentNumber" type="range" min="1" max="44"
+									step="1" value="${presidentNumber}" onchange="this.form.submit()" />
+							</form>
+
+							<br>
+						</div>
+
+
+					</div>
 					<div class="col-lg-5">
 						<img src="img/presidentphoto/${presidentNumber}.jpg"
-							class="img-circle" height="300" width="300"
-							alt="${selectedPresident.lastName}">
+							class="img-circle img-responsive" height="300" width="300"
+							alt="${selectedPresident.lastName}"><br>
+						<!-- Trigger the modal with a button -->
+						<button type="button" class="btn btn-primary" data-toggle="modal"
+							data-target="#myModal">Video</button>
+
+						<!-- Modal -->
+						<div id="myModal" class="modal fade" role="dialog">
+							<div class="modal-dialog">
+
+								<!-- Modal content-->
+								<div class="modal-content">
+									<div class="modal-header">
+										<button type="button" class="close" data-dismiss="modal">&times;</button>
+										<h4 class="modal-title">
+											<font color="#337AB7">Video:
+												${selectedPresident.firstName}
+												${selectedPresident.middleName}
+												${selectedPresident.lastName} </font>
+									</div>
+									<div class="modal-body">
+										<div class="embed-responsive embed-responsive-16by9">
+											<iframe class="embed-responsive-item"
+												src="https://www.youtube.com/embed/${selectedPresident.url}"></iframe>
+										</div>
+									</div>
+									<div class="modal-footer">
+										<button type="button" class="btn btn-primary"
+											data-dismiss="modal">Close</button>
+									</div>
+								</div>
+
+							</div>
+						</div>
 
 					</div>
 					<div class="col-lg-7">
+						<div class="row">
+							<div class="col-md-1 hidden-xs hidden-sm ">
+								<form>
+									<input type="image" name="presidentNumber"
+										src="img/arrowleft.png" border="0"
+										value="${presidentNumber-1}"
+										onchange="this.form.submit() alt=" left" />
+								</form>
+							</div>
+							<div class="col-md-10 hidden-xs hidden-sm">
+								<form action="PresidentServlet" method="POST">
+									<input name="presidentNumber" type="range" min="1" max="44"
+										step="1" value="${presidentNumber}"
+										onchange="this.form.submit()" />
+								</form>
+							</div>
+							<div class="col-md-1 hidden-xs hidden-sm ">
+								<form>
+									<input type="image" name="presidentNumber"
+										src="img/arrowright.png" border="0"
+										value="${presidentNumber+1}"
+										onchange="this.form.submit() alt=" right" />
+								</form>
+							</div>
+						</div>
+
+
+
+
+						<hr>
+
 						<div class="intro-text">
 							<h2 class="name">${selectedPresident.firstName}<br>
 								${selectedPresident.middleName}<br>
 								${selectedPresident.lastName}
 							</h2>
-							<hr class="star-light">
-							<h2 class="years">${selectedPresident.termYears}<br>
-								${selectedPresident.party}
-							</h2>
+							<hr>
+							<h3 class="years">${selectedPresident.termYears}   &#8226;
+								   ${selectedPresident.party}</h3>
 						</div>
 					</div>
-					<br><hr class="col-md-12 star-light"><br>
-					<div class="col-md-6 col-md-offset-3">
-									<!---Video--->
-						<div class="embed-responsive embed-responsive-16by9">
-													<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/${selectedPresident.url}"></iframe>
-											</div></div>
 
-					</div>
+
 
 				</div>
+
+			</div>
 
 
 
