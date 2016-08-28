@@ -41,97 +41,104 @@
 
 
 	<div class="container">
-		<div class="row">
-
-
-		</div>
+		<div class="row"></div>
 
 
 
-<div class="jumbotron">
+		<div class="jumbotron">
 
 
-	<div class="row">
-		<div class="col-md-2">
-			<img src="img/potusSEAL.png" />
-		</div>
-		<div class="col-md-8">
-			<p class= "cursive">Presidents of the United States of America!</p>
-		</div>
-	</div>
-
-	<!---Slider--->
-
-
-	<div class="row">
-
-
-		<div class="col-md-2">
-			<br>
-			<form>
-				<button class="button5"name="presidentNumber" type="submit"
-					value="${presidentNumber-1}" onchange="this.form.submit()"><</button>
-			</form>
-			<br>
-		</div>
-		<div class="col-md-8">
-			<br>
-			<form action="PresidentServlet" method="POST">
-				<input name="presidentNumber" type="range" min="1" max="44"
-					step="1" value="${presidentNumber}" onchange="this.form.submit()" />
-				</form>
-
-			<br>
-		</div>
-		<div class="col-md-2">
-			<br>
-			<form>
-
-				<button class="button5"name="presidentNumber" type="submit"
-					value="${presidentNumber+1}" onchange="this.form.submit()">></button>
-			</form>
-			<br>
-		</div>
-
-	</div>
-
-
-
-
-
-
-<!---PREZ PANEL--->
-
-
-		<div class="row spanbg">
-			<div class="container">
-			<div class="col-lg-5 vertical-align">
-					<img src="img/presidentphoto/${presidentNumber}.jpg"
-					class="img-circle"
-					height="300" width="300"
-					alt="${selectedPresident.lastName}">
-
-			</div>
-			<div class="col-lg-7 vertical-align">
-				<div class="intro-text">
-					<h2 class="name">${selectedPresident.firstName}<br>
-						${selectedPresident.middleName}<br>
-						${selectedPresident.lastName}</h2>
-					<hr class="star-light">
-					<h2 class="years">${selectedPresident.termYears}<br>
-					${selectedPresident.party}</h2>
+			<div class="row">
+				<div class="col-md-2">
+					<img src="img/potusSEAL.png" />
+				</div>
+				<div class="col-md-8">
+					<p class="cursive">Presidents of the United States of America!</p>
 				</div>
 			</div>
+
+			<!---Slider--->
+
+
+			<div class="row">
+
+
+				<div class="col-md-2">
+					<br>
+					<form>
+						<button class="button5" name="presidentNumber" type="submit"
+							value="${presidentNumber-1}" onchange="this.form.submit()"><</button>
+					</form>
+					<br>
+				</div>
+				<div class="col-md-8">
+					<br>
+					<form action="PresidentServlet" method="POST">
+						<input name="presidentNumber" type="range" min="1" max="44"
+							step="1" value="${presidentNumber}" onchange="this.form.submit()" />
+					</form>
+
+					<br>
+				</div>
+				<div class="col-md-2">
+					<br>
+					<form>
+
+						<button class="button5" name="presidentNumber" type="submit"
+							value="${presidentNumber+1}" onchange="this.form.submit()">></button>
+					</form>
+					<br>
+				</div>
+
 			</div>
-		</div>
-		<!---Video--->
-				<div class="embed-responsive embed-responsive-16by9">
-		 			<iframe class="embed-responsive-item" url="${selectedPresident.url}"></iframe>
+
+
+
+
+
+
+			<!---PREZ PANEL--->
+
+
+			<div class="row spanbg">
+				<div class="container">
+					<div class="col-lg-5">
+						<img src="img/presidentphoto/${presidentNumber}.jpg"
+							class="img-circle" height="300" width="300"
+							alt="${selectedPresident.lastName}">
+
+					</div>
+					<div class="col-lg-7">
+						<div class="intro-text">
+							<h2 class="name">${selectedPresident.firstName}<br>
+								${selectedPresident.middleName}<br>
+								${selectedPresident.lastName}
+							</h2>
+							<hr class="star-light">
+							<h2 class="years">${selectedPresident.termYears}<br>
+								${selectedPresident.party}
+							</h2>
+						</div>
+					</div>
+					<br><hr class="col-md-12 star-light"><br>
+					<div class="col-md-6 col-md-offset-3">
+									<!---Video--->
+						<div class="embed-responsive embed-responsive-16by9">
+													<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/${selectedPresident.url}"></iframe>
+											</div></div>
+
+					</div>
+
 				</div>
 
 
 
+
+
 		</div>
+
+
+
 	</div>
 	</header>
 
