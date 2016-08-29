@@ -2,11 +2,9 @@ package week6;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
-import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -41,11 +39,9 @@ public class PresidentDAO {
 					token[3] = "<br>";
 				}
 				presidents.put(counter++, new President(token[1], token[2], token[3], token[4], token[5], token[6]));
-
 			}
 			in.close();
 		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (IOException e) {
 			e.printStackTrace();

@@ -16,7 +16,6 @@ public class PresidentServlet extends HttpServlet {
 
 	public PresidentServlet() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
@@ -42,8 +41,6 @@ public class PresidentServlet extends HttpServlet {
 		request.setAttribute("selectedPresident", selectedPresident);
 		getServletContext().getRequestDispatcher("/results.jsp").forward(request, response);
 
-		// response.getWriter().append("Served at:
-		// ").append(request.getContextPath());
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
