@@ -1,9 +1,8 @@
 # Presidents
-Skill Distillery Week 6 Project: Presidents.
-http://52.88.227.165:8080/Presidents/
+[Skill Distillery Week 6 Project: Presidents.] (http://52.88.227.165:8080/Presidents/)
 
 # Collaborators
-Steven Adams & Elijah Ginter
+[Steven Adams] (https://github.com/stevenmadams) & Elijah Ginter
 
 # Overview
 Our first Java web application in the Skill Distillery course was a Presidents of the U.S. showcase. 
