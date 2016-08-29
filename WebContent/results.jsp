@@ -13,7 +13,6 @@
 <meta name="author" content="">
 
 <title>Presidents of the USA</title>
-<!---Carousel ---->
 
 
 <!-- Bootstrap  CSS -->
@@ -56,7 +55,6 @@
 
 
 
-			<!---Slider--->
 
 
 
@@ -66,18 +64,21 @@
 
 
 
-			<!---PREZ PANEL--->
+
+
 
 
 			<div class="row spanbg">
 				<div class="container">
+
+
+
+<%-- slider for mobile and tablets --%>
 					<div class="row hidden-md hidden-lg">
-
-
-
 						<br>
 							<div class="row">
 								<div class="col-xs-2">
+									<%-- left arrow  --%>
 									<form>
 										<input type="image" name="presidentNumber"
 											src="img/arrowleft.png" border="0"
@@ -86,6 +87,7 @@
 									</form>
 								</div>
 								<div class="col-xs-8">
+									<%-- slider --%>
 									<form action="PresidentServlet" method="POST">
 										<input name="presidentNumber" type="range" min="1" max="44"
 											step="1" value="${presidentNumber}"
@@ -93,6 +95,7 @@
 									</form>
 								</div>
 								<div class="col-xs-2 ">
+									<%-- right arrow --%>
 									<form>
 										<input type="image" name="presidentNumber"
 											src="img/arrowright.png" border="0"
@@ -104,7 +107,7 @@
 							<br>
 
 					</div>
-					<hr hidden-md hidden-lg>
+					<hr class="hidden-md hidden-lg">
 					<div class="col-lg-5">
 						<img src="img/presidentphoto/${presidentNumber}.jpg"
 							class="img-circle img-responsive" height="300" width="300"
@@ -147,7 +150,7 @@
 					</div>
 					<div class="col-lg-7">
 						<br>
-						<div class="row">
+						<div class="row hidden-xs hidden-sm">
 							<div class="col-md-1 hidden-xs hidden-sm ">
 								<form>
 									<input type="image" name="presidentNumber"
@@ -172,10 +175,7 @@
 								</form>
 							</div>
 						</div>
-						<br>
-
-
-
+				
 						<hr>
 
 						<div class="intro-text">
