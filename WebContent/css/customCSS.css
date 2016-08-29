@@ -16,11 +16,14 @@ border-radius: 50%;
     color: white;
 }
 
+body {
+  background-image: url("../img/pseal.jpg");
+  background-position: center;
+}
+
 header {
   display: block;
   text-align: center;
-  background-image: url("../img/pseal.jpg");
-  background-position: center;
 
 
 }
