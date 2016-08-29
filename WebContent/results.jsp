@@ -75,24 +75,42 @@
 
 
 
-						<div class="col-md-12">
-							<br>
-							<form action="PresidentServlet" method="POST">
-								<input name="presidentNumber" type="range" min="1" max="44"
-									step="1" value="${presidentNumber}" onchange="this.form.submit()" />
-							</form>
 
-							<br>
-						</div>
+							<div class="row">
+								<div class="col-xs-2">
+									<form>
+										<input type="image" name="presidentNumber"
+											src="img/arrowleft.png" border="0"
+											value="${presidentNumber-1}"
+											onchange="this.form.submit() alt=" left" />
+									</form>
+								</div>
+								<div class="col-xs-8">
+									<form action="PresidentServlet" method="POST">
+										<input name="presidentNumber" type="range" min="1" max="44"
+											step="1" value="${presidentNumber}"
+											onchange="this.form.submit()" />
+									</form>
+								</div>
+								<div class="col-xs-2 ">
+									<form>
+										<input type="image" name="presidentNumber"
+											src="img/arrowright.png" border="0"
+											value="${presidentNumber+1}"
+											onchange="this.form.submit() alt=" right" />
+									</form>
+								</div>
+							</div>
 
 
 					</div>
+					<hr hidden-md hidden-lg>
 					<div class="col-lg-5">
 						<img src="img/presidentphoto/${presidentNumber}.jpg"
 							class="img-circle img-responsive" height="300" width="300"
 							alt="${selectedPresident.lastName}"><br>
 						<!-- Trigger the modal with a button -->
-						<button type="button" class="btn btn-primary" data-toggle="modal"
+						<button type="button" class="btn btn-primary hidden-xs hidden-sm" data-toggle="modal"
 							data-target="#myModal">Video</button>
 
 						<!-- Modal -->
@@ -110,6 +128,8 @@
 												${selectedPresident.lastName} </font>
 									</div>
 									<div class="modal-body">
+
+
 										<div class="embed-responsive embed-responsive-16by9">
 											<iframe class="embed-responsive-item"
 												src="https://www.youtube.com/embed/${selectedPresident.url}"></iframe>
@@ -162,10 +182,13 @@
 								${selectedPresident.middleName}<br>
 								${selectedPresident.lastName}
 							</h2>
+							<button type="button" class="btn btn-primary hidden-md hidden-lg" data-toggle="modal"
+								data-target="#myModal">Video</button>
 							<hr>
 							<h3 class="years">${selectedPresident.termYears}   &#8226;
 								   ${selectedPresident.party}</h3>
 						</div>
+
 					</div>
 
 
