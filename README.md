@@ -8,7 +8,7 @@ Steven Adams & Elijah Ginter
 # Overview
 Our first Java web application in the Skill Distillery course was a Presidents of the U.S. showcase. 
 
-Front-End:
+Front-end:
 - HTML5
 - CSS3
 - Bootstrap
