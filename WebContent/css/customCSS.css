@@ -19,8 +19,9 @@ border-radius: 50%;
 header {
   display: block;
   text-align: center;
-  background: #8b3e3e;
-  color: white;
+  background-image: url("../img/pseal.jpg");
+  background-position: center;
+
 
 }
 header .container {
@@ -158,7 +159,10 @@ input[type=range]:focus::-ms-fill-upper {
 
 
 .spanbg{
+  background-image: url(../img/parchment.jpg);
+  background-size: 100% 100%;
   background-color: #cec79a;
+
 }
 
 /***** CAROUSEL ******/

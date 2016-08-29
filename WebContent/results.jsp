@@ -75,14 +75,14 @@
 
 
 
-
+						<br>
 							<div class="row">
 								<div class="col-xs-2">
 									<form>
 										<input type="image" name="presidentNumber"
 											src="img/arrowleft.png" border="0"
 											value="${presidentNumber-1}"
-											onchange="this.form.submit() alt=" left" />
+											onchange="this.form.submit()" alt=" left" />
 									</form>
 								</div>
 								<div class="col-xs-8">
@@ -97,11 +97,11 @@
 										<input type="image" name="presidentNumber"
 											src="img/arrowright.png" border="0"
 											value="${presidentNumber+1}"
-											onchange="this.form.submit() alt=" right" />
+											onchange="this.form.submit()" alt=" right" />
 									</form>
 								</div>
 							</div>
-
+							<br>
 
 					</div>
 					<hr hidden-md hidden-lg>
@@ -146,13 +146,14 @@
 
 					</div>
 					<div class="col-lg-7">
+						<br>
 						<div class="row">
 							<div class="col-md-1 hidden-xs hidden-sm ">
 								<form>
 									<input type="image" name="presidentNumber"
 										src="img/arrowleft.png" border="0"
 										value="${presidentNumber-1}"
-										onchange="this.form.submit() alt=" left" />
+										onchange="this.form.submit()" alt=" left" />
 								</form>
 							</div>
 							<div class="col-md-10 hidden-xs hidden-sm">
@@ -167,20 +168,23 @@
 									<input type="image" name="presidentNumber"
 										src="img/arrowright.png" border="0"
 										value="${presidentNumber+1}"
-										onchange="this.form.submit() alt=" right" />
+										onchange="this.form.submit()" alt=" right" />
 								</form>
 							</div>
 						</div>
-
+						<br>
 
 
 
 						<hr>
 
 						<div class="intro-text">
-							<h2 class="name">${selectedPresident.firstName}<br>
+							<h2 class="name">
+								<div class="vertical-center">
+								${selectedPresident.firstName}<br>
 								${selectedPresident.middleName}<br>
 								${selectedPresident.lastName}
+							</div>
 							</h2>
 							<button type="button" class="btn btn-primary hidden-md hidden-lg" data-toggle="modal"
 								data-target="#myModal">Video</button>
